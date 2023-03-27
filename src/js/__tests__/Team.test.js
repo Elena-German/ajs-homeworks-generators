@@ -8,11 +8,10 @@ test('тестирование класса Team', () => {
   const myTeam = new Team(player1, player2);
 
   let i = 0;
-  for (let player of myTeam) {
-    i = i + 1;
+  for (const player of myTeam) {
+    i += 1;
     if (i <= myTeam.players.length) {
       expect(player).toEqual(myTeam.players[i - 1]);
     }
   }
-
 });
